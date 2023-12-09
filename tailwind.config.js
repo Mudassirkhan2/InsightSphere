@@ -13,6 +13,10 @@ module.exports = {
         'primary-text': 'white',
         'softText': '#b7bac1',
       },
+      backgroundImage: {
+        'gradient-to-top': 'linear-gradient(to top, #182237, #253352)',
+      },
+      
     },
   },
   plugins: [],
