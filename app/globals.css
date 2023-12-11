@@ -3,9 +3,13 @@
 @tailwind utilities;
 
 body {
-    background-color: #151c2c;
-    color: white;
+  background-color: #151c2c;
+  color: white;
+}
+
+
+@layer components {
+  .form-element {
+    @apply p-3 bg-[#151c2c] text-white border-2 border-solid border-[#2e374a] rounded-md mb-7;
   }
-  
- 
-  
+}
