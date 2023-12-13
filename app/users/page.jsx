@@ -3,11 +3,14 @@ import Search from '@/components/common/Search'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
-import { fetchUser } from '../../lib/data.js'
+import { fetchUsers } from '../../lib/data.js'
 
-const page = async () => {
+const page = async ({ searchParams }) => {
+    const q = searchParams?.q || "";
+    console.log("q", q)
+    const page = searchParams?.page || 1;
 
-    const users = await fetchUser()
+    const { count, users } = await fetchUsers(q, page);
     console.log("users", users)
     return (
         <div className='p-5 mt-5 rounded-md bg-softBg'>
@@ -55,7 +58,7 @@ const page = async () => {
 
                 </tbody>
             </table>
-            <Pagination />
+            <Pagination count={count} />
         </div>
     )
 }

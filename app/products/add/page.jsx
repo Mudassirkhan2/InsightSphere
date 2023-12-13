@@ -1,9 +1,15 @@
+import { addUser } from '@/lib/action'
 import React from 'react'
 const page = async () => {
+    const handleForm = async (formData) => {
+        'use server'
+        console.log("formData", formData)
+    }
+
 
     return (
         <div className='p-5 mt-5 rounded-lg bg-softBg '>
-            <form className='flex flex-wrap justify-between form'>
+            <form action={handleForm} className='flex flex-wrap justify-between form' >
                 <input type="text" placeholder="title" name="title" required className='form-element w-[45%]' />
                 <select name="cat" id="cat" className='form-element w-[45%]' >
                     <option value="general">Choose a Category</option>
