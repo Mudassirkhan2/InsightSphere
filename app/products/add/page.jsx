@@ -1,6 +1,6 @@
 import React from 'react'
+const page = async () => {
 
-const page = () => {
     return (
         <div className='p-5 mt-5 rounded-lg bg-softBg '>
             <form className='flex flex-wrap justify-between form'>

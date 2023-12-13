@@ -3,8 +3,12 @@ import Search from '@/components/common/Search'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
+import { fetchUser } from '../../lib/data.js'
 
-const page = () => {
+const page = async () => {
+
+    const users = await fetchUser()
+    console.log("users", users)
     return (
         <div className='p-5 mt-5 rounded-md bg-softBg'>
             <div className='flex items-center justify-between'>
@@ -25,26 +29,30 @@ const page = () => {
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td className='p-3'>
-                            <div className='flex items-center gap-2'>
-                                <Image src='/noavatar.png' width={40} height={40} className='object-cover rounded-full' />
-                                John Doe
-                            </div>
-                        </td>
-                        <td className='p-3'>John@gmail.com</td>
-                        <td className='p-3'>13/12/2002</td>
-                        <td className='p-3'>Admin</td>
-                        <td className='p-3'>Active</td>
-                        <td className='p-3'>
-                            <div className='flex gap-2'>
-                                <Link href='/users/edit'>
-                                    <button className='px-2 py-1 text-white bg-teal-500 border-none rounded-md cursor-pointer'>Edit</button>
-                                </Link>
-                                <button className='px-2 py-1 text-white bg-red-500 border-none rounded-md cursor-pointer'>Delete</button>
-                            </div>
-                        </td>
-                    </tr>
+                    {
+                        users.map((user) => (
+                            <tr key={user.id}>
+                                <td className='p-3'>
+                                    <div className='flex items-center gap-2'>
+                                        <Image src={user.img || '/noavatar.png'} width={40} height={40} className='object-cover rounded-full' />
+                                        {user.username}
+                                    </div>
+                                </td>
+                                <td className='p-3'>{user.email}</td>
+                                <td className='p-3'>{user.createdAt?.toString().slice(4, 16)}</td>
+                                <td className='p-3'>{user.isAdmin ? "Admin" : "client"}</td>
+                                <td className='p-3'>{user.isActive ? "active" : "passive"}</td>
+                                <td className='p-3'>
+                                    <div className='flex gap-2'>
+                                        <Link href={`/users/${user.id}`}>
+                                            <button className='px-2 py-1 text-white bg-teal-500 border-none rounded-md cursor-pointer'>Edit</button>
+                                        </Link>
+                                        <button className='px-2 py-1 text-white bg-red-500 border-none rounded-md cursor-pointer'>Delete</button>
+                                    </div>
+                                </td>
+                            </tr>
+                        ))}
+
                 </tbody>
             </table>
             <Pagination />
