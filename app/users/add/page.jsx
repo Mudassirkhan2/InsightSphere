@@ -5,7 +5,7 @@ const page = async () => {
 
 
     return (
-        <div className='p-5 mt-5 rounded-lg bg-softBg '>
+        <div className='p-5 mt-5 rounded-lg softBg '>
             <form className='flex flex-wrap justify-between form' action={addUser}>
                 <input type="text" placeholder="username" name="username" required className='form-element w-[45%]' />
                 <input type="email" placeholder="email" name="email" required className='form-element w-[45%]' />

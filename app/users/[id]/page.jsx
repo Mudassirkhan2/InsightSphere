@@ -9,7 +9,7 @@ const page = async ({ params }) => {
     const user = await fetchUser(id);
     return (
         <div className='flex gap-12 mt-3'>
-            <div className='flex-1 p-5 font-bold bg-softBg rounded-xl text-softText h-max'>
+            <div className='flex-1 p-5 font-bold softBg rounded-xl text-softText h-max'>
                 <div className='w-full h-[300px] relative rounded-lg overflow-hidden mb-5 '>
                     <Image src={
                         user.img || '/noavatar.png'
@@ -17,7 +17,7 @@ const page = async ({ params }) => {
                 </div>
                 {user.username}
             </div>
-            <div className='flex-[3] bg-softBg p-5 rounded-lg '>
+            <div className='flex-[3] softBg p-5 rounded-lg '>
                 <form className='flex flex-col' action={updateUser}>
                     <input type="hidden" name="id" className='form-element' value={id} />
                     <label>Username</label>

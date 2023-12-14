@@ -3,7 +3,7 @@ import React from 'react'
 
 const Transactions = () => {
     return (
-        <div className='p-5 rounded-lg bg-softBg'>
+        <div className='p-5 rounded-lg softBg'>
             <h2 className='mb-5 font-extralight text-softText'>Latest Transactions</h2>
             <table className='w-full'>
                 <thead>
@@ -25,7 +25,7 @@ const Transactions = () => {
                                     height={40}
                                     className='object-cover rounded-full'
                                 />
-                                John Doe
+                                Mudassir
                             </div>
                         </td>
                         <td>
@@ -33,8 +33,8 @@ const Transactions = () => {
                                 Pending
                             </span>
                         </td>
-                        <td>14.02.2024</td>
-                        <td>$3.200</td>
+                        <td>12.07.2023</td>
+                        <td>$3,200</td>
                     </tr>
                     <tr>
                         <td className='p-2'>
@@ -53,7 +53,7 @@ const Transactions = () => {
                             <span className='p-1 rounded text-white bg-[#afd6ee75]'>Done</span>
                         </td>
                         <td>14.02.2024</td>
-                        <td>$3.200</td>
+                        <td>$5,400</td>
                     </tr>
                     <tr>
                         <td className='p-2'>
@@ -65,7 +65,7 @@ const Transactions = () => {
                                     height={40}
                                     className='object-cover rounded-full'
                                 />
-                                John Doe
+                                Muzammil
                             </div>
                         </td>
                         <td>
@@ -73,8 +73,8 @@ const Transactions = () => {
                                 Cancelled
                             </span>
                         </td>
-                        <td>14.02.2024</td>
-                        <td>$3.200</td>
+                        <td>24.04.2023</td>
+                        <td>$6.270</td>
                     </tr>
                     <tr>
                         <td className='p-2'>
@@ -86,7 +86,7 @@ const Transactions = () => {
                                     height={40}
                                     className='object-cover rounded-full'
                                 />
-                                John Doe
+                                Manas
                             </div>
                         </td>
                         <td>
@@ -94,8 +94,8 @@ const Transactions = () => {
                                 Pending
                             </span>
                         </td>
-                        <td>14.02.2024</td>
-                        <td>$3.200</td>
+                        <td>14.02.2023</td>
+                        <td>$3,900</td>
                     </tr>
                 </tbody>
             </table>

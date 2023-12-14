@@ -1,48 +1,13 @@
 "use client"
 
+import { data } from '@/constants';
 import { LineChart, Line, XAxis, YAxis, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
-const data = [
-  {
-    name: "Sun",
-    visit: 4000,
-    click: 2400,
-  },
-  {
-    name: "Mon",
-    visit: 3000,
-    click: 1398,
-  },
-  {
-    name: "Tue",
-    visit: 2000,
-    click: 3800,
-  },
-  {
-    name: "Wed",
-    visit: 2780,
-    click: 3908,
-  },
-  {
-    name: "Thu",
-    visit: 1890,
-    click: 4800,
-  },
-  {
-    name: "Fri",
-    visit: 2390,
-    click: 3800,
-  },
-  {
-    name: "Sat",
-    visit: 3490,
-    click: 4300,
-  },
-];
+
 
 const Chart = () => {
   return (
-    <div className='h-[450px]  bg-softBg p-5 rounded-lg'>
+    <div className='h-[450px]  softBg p-5 rounded-lg'>
       <h2 className='mb-5 font-extralight text-softText'>Weekly Recap</h2>
       <ResponsiveContainer width="100%" height="90%">
         <LineChart

@@ -9,7 +9,7 @@ module.exports = {
     extend: {
       colors: {
         'primary': '#151c2c',
-        'softBg': '#182237',
+        // 'softBg': '#192a56',
         'primary-text': 'white',
         'softText': '#b7bac1',
       },
