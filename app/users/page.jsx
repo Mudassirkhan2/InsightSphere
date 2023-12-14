@@ -4,14 +4,13 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import { fetchUsers } from '../../lib/data.js'
+import { deleteUser } from '@/lib/action.js'
 
 const page = async ({ searchParams }) => {
     const q = searchParams?.q || "";
-    console.log("q", q)
     const page = searchParams?.page || 1;
 
     const { count, users } = await fetchUsers(q, page);
-    console.log("users", users)
     return (
         <div className='p-5 mt-5 rounded-md bg-softBg'>
             <div className='flex items-center justify-between'>
@@ -50,7 +49,11 @@ const page = async ({ searchParams }) => {
                                         <Link href={`/users/${user.id}`}>
                                             <button className='px-2 py-1 text-white bg-teal-500 border-none rounded-md cursor-pointer'>Edit</button>
                                         </Link>
-                                        <button className='px-2 py-1 text-white bg-red-500 border-none rounded-md cursor-pointer'>Delete</button>
+                                        <form action={deleteUser}
+                                        >
+                                            <input type="hidden" name="id" value={user.id} />
+                                            <button className='px-2 py-1 text-white bg-red-500 border-none rounded-md cursor-pointer'>Delete</button>
+                                        </form>
                                     </div>
                                 </td>
                             </tr>
