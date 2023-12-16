@@ -4,7 +4,7 @@ import { MdPlayCircleFilled, MdReadMore } from "react-icons/md";
 const Rightbar = () => {
   return (
     <div className="min-h-screen">
-      <div className='relative px-5 py-6 mb-5 rounded-lg bg-gradient-to-top'>
+      <div className='relative px-4  py-6 mb-5 rounded-lg bg-gradient-to-top'>
         <div className='absolute bottom-0 right-0 w-1/2 h-1/2'>
           <Image className='object-contain opacity-20' src="/astronaut.png" alt="" fill />
         </div>

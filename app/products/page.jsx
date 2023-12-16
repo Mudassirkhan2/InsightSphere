@@ -23,12 +23,12 @@ const page = async ({ searchParams }) => {
             <table className='w-full'>
                 <thead>
                     <tr>
-                        <td>Title</td>
-                        <td>Description</td>
-                        <td>Price</td>
-                        <td>Created At</td>
-                        <td>Stock</td>
-                        <td>Action</td>
+                        <td className='p-3 ' >Title</td>
+                        <td className='p-3 '>Description</td>
+                        <td className='p-3 '>Price</td>
+                        <td className='p-3 '>Created At</td>
+                        <td className='p-3 '>Stock</td>
+                        <td className='p-3 '>Action</td>
                     </tr>
                 </thead>
                 <tbody >

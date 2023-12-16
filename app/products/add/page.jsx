@@ -2,7 +2,7 @@ import { addProduct, addUser } from '@/lib/action'
 import React from 'react'
 const page = async () => {
     return (
-        <div className='p-5 mt-5 rounded-lg bg-softBg '>
+        <div className='p-5 mt-5 rounded-lg softBg '>
             <form action={addProduct} className='flex flex-wrap justify-between form' >
                 <input type="text" placeholder="product title" name="title" required className='form-element w-[45%]' />
                 <select name="cat" id="cat" className='form-element w-[45%]' >
