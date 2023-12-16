@@ -17,7 +17,7 @@ const Navbar = () => {
             <div className="flex items-center gap-5">
                 <div className="flex items-center gap-2 bg-[#2e374a] p-2 rounded-lg">
                     <MdSearch />
-                    <input type="text" placeholder="Search..." className='bg-transparent border-none text-primary' />
+                    <input type="text" placeholder="Search..." className='hidden bg-transparent border-none md:block text-primary' />
                 </div>
                 <div className="flex gap-5">
                     <MdOutlineChat size={20} />
