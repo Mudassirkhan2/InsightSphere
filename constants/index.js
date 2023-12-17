@@ -143,17 +143,17 @@ export const cards = [
         list: [
             {
                 title: "Revenue",
-                path: "/revenue",
+                path: "/",
                 icon: <MdWork />,
             },
             {
                 title: "Reports",
-                path: "/reports",
+                path: "/",
                 icon: <MdAnalytics />,
             },
             {
                 title: "Teams",
-                path: "/teams",
+                path: "/",
                 icon: <MdPeople />,
             },
         ],
@@ -163,12 +163,12 @@ export const cards = [
         list: [
             {
                 title: "Settings",
-                path: "/settings",
+                path: "/",
                 icon: <MdOutlineSettings />,
             },
             {
                 title: "Help",
-                path: "/help",
+                path: "/",
                 icon: <MdHelpCenter />,
             },
         ],
