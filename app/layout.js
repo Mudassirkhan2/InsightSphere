@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
         <div className='relative flex min-h-screen'>
-          <div className='flex-1 hidden p-5 xl:block softBg'>
+          <div className='flex-1 hidden min-h-screen p-5 xl:block softBg'>
             <Sidebar/>
           </div>
           <div className='flex-[6] xl:flex-[5] p-4 lg:p-5'>
