@@ -10,6 +10,51 @@ import {
   MdHelpCenter,
   MdLogout,
 } from "react-icons/md";
+
+export const transactionsdata = [
+  {
+      name: "Sun",
+      books: 4000,
+      clothes: 2400,
+      electronic: 2400,
+  },
+  {
+      name: "Mon",
+      books: 3000,
+      clothes: 1398,
+      electronic: 2210,
+  },
+  {
+      name: "Tue",
+      books: 2000,
+      clothes: 9800,
+      electronic: 2290,
+  },
+  {
+      name: "Wed",
+      books: 2780,
+      clothes: 3908,
+      electronic: 2000,
+  },
+  {
+      name: "Thu",
+      books: 1890,
+      clothes: 4800,
+      electronic: 2181,
+  },
+  {
+      name: "Fri",
+      books: 2390,
+      clothes: 3800,
+      electronic: 2500,
+  },
+  {
+      name: "Sat",
+      books: 3490,
+      clothes: 4300,
+      electronic: 2100,
+  },
+];
 export const cards = [
     {
       id: 1,
@@ -129,3 +174,36 @@ export const cards = [
         ],
     },
 ];
+
+export const barChartBoxVisit = [
+  {
+      name: "Sun",
+      visit: 4000,
+  },
+  {
+      name: "Mon",
+      visit: 3000,
+  },
+  {
+      name: "Tue",
+      visit: 2000,
+  },
+  {
+      name: "Wed",
+      visit: 2780,
+  },
+  {
+      name: "Thu",
+      visit: 1890,
+  },
+  {
+      name: "Fri",
+      visit: 2390,
+  },
+  {
+      name: "Sat",
+      visit: 3490,
+  },
+];
+
+
